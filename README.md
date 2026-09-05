@@ -24,8 +24,19 @@ just because an older configuration guide recommends it.
 
 ## Installation
 
-Extract this directory and open a terminal in it. Run everything as your ordinary
-user. The installer invokes sudo only for Arch packages.
+Clone the repository with its companion repositories:
+
+```bash
+git clone --recurse-submodules https://github.com/Epineph/codex-arch-kit.git
+cd codex-arch-kit
+```
+
+For an existing clone, populate the companions at their recorded commits with
+`git submodule update --init --recursive`. The companions are
+`codex-session-capture` and `repo-maintainer-lab`.
+
+Run everything as your ordinary user. The installer invokes sudo only for Arch
+packages.
 
 If npm is absent, install it using your normal Arch package management:
 

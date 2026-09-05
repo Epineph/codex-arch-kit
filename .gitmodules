@@ -1,2 +1,6 @@
-https://github.com/Epineph/repo-maintainer-lab
-https://github.com/Epineph/codex-session-capture
+[submodule "codex-session-capture"]
+  path = codex-session-capture
+  url = https://github.com/Epineph/codex-session-capture.git
+[submodule "repo-maintainer-lab"]
+  path = repo-maintainer-lab
+  url = https://github.com/Epineph/repo-maintainer-lab.git
