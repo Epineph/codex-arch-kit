@@ -1,0 +1,34 @@
+# Codex CLI personal baseline, researched 2026-09-05.
+# configure.py selects the installed model's highest advertised level.
+model = "gpt-6-astra"
+model_reasoning_effort = "max"
+plan_mode_reasoning_effort = "max"
+# Deliberate workspace edits; approval for operations outside the sandbox.
+approval_policy = "on-request"
+sandbox_mode = "workspace-write"
+web_search = "live"
+
+[sandbox_workspace_write]
+network_access = false
+
+[features]
+multi_agent = true
+memories = true
+remote_plugin = true
+shell_snapshot = true
+unified_exec = true
+
+[agents]
+enabled = true
+max_concurrent_threads_per_session = 4
+# No cheaper model overrides: subagents inherit the selected parent model.
+
+[memories]
+generate_memories = true
+use_memories = true
+
+[mcp_servers.openaiDeveloperDocs]
+url = "https://developers.openai.com/mcp"
+enabled = true
+startup_timeout_sec = 30
+tool_timeout_sec = 90
